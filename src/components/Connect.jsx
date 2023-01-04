@@ -19,11 +19,10 @@ export default function Connect() {
         name="contact"
         method="POST"
         action="/contact"
-        data-netlify="true"
         className="flex flex-col items-center justify-center gap-2"
       >
-        <input type="hidden" name="form-name" value="contact" />
         <section className="flex flex-col gap-2">
+          <input type="hidden" name="form-name" value="contact" />
           <input
             type="text"
             placeholder="Name"
