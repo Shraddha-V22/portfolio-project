@@ -20,6 +20,7 @@ export default function Connect() {
         method="POST"
         data-netlify="true"
         className="flex flex-col items-center justify-center gap-2"
+        netlify
       >
         <section className="flex flex-col gap-2">
           <input
