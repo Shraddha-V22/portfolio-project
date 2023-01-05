@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 export default function Header({ onclick, activeSection }) {
   const modeToggled = useTheme();
-  const [windowWidth, setWindowWidth] = useState(1000);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [menuClicked, setMenuClicked] = useState(false);
 
   useEffect(() => {

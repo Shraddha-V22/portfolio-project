@@ -27,7 +27,7 @@ export default function Connect() {
             type="text"
             placeholder="Name"
             name="name"
-            className={`w-[350px] rounded-sm bg-blueGrotto/50 py-2 px-4 text-sm ${
+            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm ${
               modeToggled
                 ? "text-gray-300"
                 : "text-gray-700 placeholder:text-gray-600"
@@ -37,7 +37,7 @@ export default function Connect() {
             type="email"
             placeholder="E-mail"
             name="email"
-            className={`w-[350px] rounded-sm bg-blueGrotto/50 py-2 px-4 text-sm ${
+            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm ${
               modeToggled
                 ? "text-gray-300"
                 : "text-gray-700 placeholder:text-gray-600"
@@ -49,7 +49,7 @@ export default function Connect() {
             cols="30"
             rows="5"
             placeholder="any message or suggestion for me?"
-            className={`w-[350px] rounded-sm bg-blueGrotto/50 py-2 px-4 text-sm ${
+            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm ${
               modeToggled
                 ? "text-gray-300"
                 : "text-gray-700 placeholder:text-gray-600"
@@ -58,7 +58,7 @@ export default function Connect() {
         </section>
         <button
           type="submit"
-          className="m-2 w-full rounded-sm bg-gradient-to-bl from-blueGrotto to-blueGreen py-1 px-4 text-sm uppercase text-navyBlue hover:shadow-sm hover:shadow-blueGreen"
+          className="m-2 w-full rounded-md bg-gradient-to-bl from-blueGrotto to-blueGreen py-2 px-4 text-sm font-semibold uppercase text-navyBlue hover:shadow-sm hover:shadow-blueGreen"
         >
           connect
         </button>
