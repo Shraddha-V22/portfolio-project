@@ -60,7 +60,7 @@ export default function App() {
     <ThemeContext.Provider value={modeToggled}>
       <div
         ref={navRef}
-        className={`overflow-x-hidden font-sans ${
+        className={`overflow-x-hidden ${
           modeToggled ? "bg-dark text-blueGreen" : "text-navyBlue"
         }`}
       >

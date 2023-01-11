@@ -17,6 +17,7 @@ module.exports = {
           "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
       },
       gridTemplateColumns: {
+        "autoFill-50": "repeat(auto-fill, minmax(50px, auto))",
         "autoFill-100": "repeat(auto-fill, minmax(100px, auto))",
         "autoFill-250": "repeat(auto-fill, minmax(250px, auto))",
         "autoFill-300": "repeat(auto-fill, minmax(300px, auto))",

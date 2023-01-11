@@ -224,7 +224,6 @@ export default function Header({ onclick, activeSection }) {
           className={`h-1 w-[100%] bg-gradient-to-r from-navyBlue via-blueGreen to-navyBlue`}
         ></div>
       </header>
-      {/* <div className="fixed h-8 w-full animate-bg-pan bg-gradient-to-r from-navyBlue via-blueGreen to-navyBlue bg-200% blur-md"></div> */}
     </>
   );
 }

@@ -14,7 +14,7 @@ export default function Skills() {
         <span className="duration-75 hover:scale-125">L</span>
         <span className="duration-75 hover:scale-125">S</span>
       </h1>{" "}
-      <section className="mx-auto mt-8 grid grid-cols-autoFill-100 place-items-center content-center justify-items-center gap-8 sm:h-auto sm:w-[90vw] lg:h-[350px] lg:w-[60vw]">
+      <section className="mx-auto mt-8 grid grid-cols-autoFill-100 place-items-center content-center justify-items-center gap-8 max-[400px]:grid-cols-autoFill-50 sm:h-auto sm:w-[90vw] lg:h-[350px] lg:w-[60vw]">
         {logoImageData.map((logo) => (
           <SkillCard key={logo.title} image={logo} />
         ))}
@@ -32,7 +32,7 @@ function SkillCard({ image }) {
         src={image.url}
         alt={image.title}
         title={image.title}
-        className={`h-20 w-20 rounded-md bg-babyBlue p-4 shadow-spread`}
+        className={`h-20 w-20 rounded-md bg-babyBlue p-4 shadow-spread max-[400px]:h-16 max-[400px]:w-16`}
       />
     </Parallax>
   );

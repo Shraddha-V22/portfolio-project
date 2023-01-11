@@ -5,7 +5,10 @@ export default function Connect() {
   const modeToggled = useTheme();
 
   return (
-    <section id="connect" className="mt-8 flex flex-col items-center">
+    <section
+      id="connect"
+      className="mt-8 flex flex-col items-center max-[400px]:w-[95vw]"
+    >
       <h1 className="mb-4 flex cursor-default justify-center gap-2 text-[48px]">
         <span className="duration-75 hover:scale-125">C</span>
         <span className="duration-75 hover:scale-125">O</span>
@@ -27,7 +30,7 @@ export default function Connect() {
             type="text"
             placeholder="Name"
             name="name"
-            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm ${
+            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm max-[400px]:w-[90vw] ${
               modeToggled
                 ? "text-gray-300"
                 : "text-gray-700 placeholder:text-gray-600"
@@ -37,7 +40,7 @@ export default function Connect() {
             type="email"
             placeholder="E-mail"
             name="email"
-            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm ${
+            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm max-[400px]:w-[90vw] ${
               modeToggled
                 ? "text-gray-300"
                 : "text-gray-700 placeholder:text-gray-600"
@@ -49,7 +52,7 @@ export default function Connect() {
             cols="30"
             rows="5"
             placeholder="any message or suggestion for me?"
-            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm ${
+            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm max-[400px]:w-[90vw] ${
               modeToggled
                 ? "text-gray-300"
                 : "text-gray-700 placeholder:text-gray-600"
