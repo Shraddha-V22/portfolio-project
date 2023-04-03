@@ -1,80 +1,59 @@
 import React from "react";
-import { useTheme } from "../App";
-import devsnest from "../Images/devsnest.png";
-import freecodecamp from "../Images/freecodecamp.jpg";
+import { motion } from "framer-motion";
+import { componentVarient } from "./varients/varients";
 
 export default function About() {
-  const modeToggled = useTheme();
-
   return (
-    <div className="m-8 scroll-mt-12" id="about">
-      <h1 className="mb-4 flex cursor-default justify-center gap-2 text-[48px]">
-        <span className="duration-75 hover:scale-125">A</span>
-        <span className="duration-75 hover:scale-125">B</span>
-        <span className="duration-75 hover:scale-125">O</span>
-        <span className="duration-75 hover:scale-125">U</span>
-        <span className="duration-75 hover:scale-125">T</span>
-      </h1>
-      <section className="flex h-[80%] flex-col items-center justify-center gap-4">
-        <section
-          className={`flex h-[fit-content] max-w-[800px] gap-4 p-8 text-justify tracking-wide ${
-            modeToggled ? "text-babyBlue" : "text-navyBlue"
-          }`}
-        >
-          <p>
-            Hi! My name is{" "}
-            <strong className="text-blueGrotto">Shraddha Vishwakarma</strong>{" "}
-            and I'm front-end developer.
-            <br />
-            As a frontend developer, I have a strong foundation in HTML, CSS,
-            JavaScript, and React. I am skilled in creating visually appealing
-            and user-friendly websites and applications. I am able to work well
-            independently and as part of a team, and have excellent
-            problem-solving and communication skills. With my talent and
-            dedication, I am well-equipped to succeed in a frontend developer
-            role.
-          </p>
-        </section>
+    <motion.div className="grid h-full w-full place-items-center font-newCycle">
+      <motion.section
+        variants={componentVarient}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={`mx-auto h-[fit-content] max-w-[500px] text-center leading-7 tracking-widest`}
+      >
+        <p className="m-2 bg-black/90 p-2 text-white">
+          Hey there✨👋, I'm Shraddha Vishwakarma!!
+          <br />I have a passion for coding and love to create clean, function,
+          user-friendly websites. I have worked on various projects which make
+          use of languages such as HTML5, CSS3, JavaScript, React, TypeScript,
+          etc. I strive to create websites that are intuitive and easy to
+          navigate. When I'm not coding, I enjoy Sketching/drawing✨.
+        </p>
+      </motion.section>
+    </motion.div>
+  );
+}
 
-        <section className="flex w-[fit-content] flex-col items-center rounded-md bg-gradient-to-b from-babyBlue to-blueGrotto p-4">
-          <h1 className="mb-2 text-xl text-navyBlue">Certifications</h1>
-          <section className="grid grid-cols-autoFill-250 gap-2 text-center sm:w-[fit-content] lg:w-[770px]">
-            <section className="w-[250px] rounded-md bg-babyBlue p-2">
-              <img
-                src={devsnest}
-                alt="Devsnest logo"
-                className="mx-auto h-16 w-16 rounded-full p-2"
-              />
-              <h1 className="text-xl font-bold text-dark">Devsnest</h1>
-              <p className="text-sm text-navyBlue">Front-End Web Development</p>
-            </section>
-            <section className="w-[250px] rounded-md bg-babyBlue p-2">
-              <img
-                src={freecodecamp}
-                alt="FreeCodeCamp logo"
-                className="mx-auto h-16 w-16 rounded-full p-2"
-              />
-              <h1 className="text-xl font-bold text-dark">Free Code Camp</h1>
-              <p className="text-sm text-navyBlue">
-                JavaScript Algorithms and Data Structures
-              </p>
-            </section>
+const certificationVarients = {
+  hidden: {
+    opacity: 0,
+    y: -100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
-            <section className="w-[250px] rounded-md bg-babyBlue p-2">
-              <img
-                src={freecodecamp}
-                alt="FreeCodeCamp logo"
-                className="mx-auto h-16 w-16 rounded-full p-2"
-              />
-              <h1 className="text-xl font-bold text-dark">Free Code Camp</h1>
-              <p className="text-sm text-navyBlue">
-                Responsive Web Development
-              </p>
-            </section>
-          </section>
-        </section>
+function Certification({ institution, course, imgSrc }) {
+  return (
+    <motion.section
+      variants={certificationVarients}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="flex w-[250px] items-center gap-2 rounded-md border-[1px] border-black/10 py-4 px-1"
+    >
+      <img
+        src={imgSrc}
+        alt={`${institution} logo`}
+        className="mx-auto h-16 w-16 rounded-full p-2"
+      />
+      <section>
+        <h1 className="text-dark text-xl font-bold">{institution}</h1>
+        <p className="text-sm">{course}</p>
       </section>
-      {/* <section className="max-w-[500px] bg-gray-400 p-4 text-justify text-white"></section> */}
-    </div>
+    </motion.section>
   );
 }

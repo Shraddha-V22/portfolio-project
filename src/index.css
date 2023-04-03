@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Karla:wght@300;400;500&family=News+Cycle&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,22 +15,7 @@ p {
   letter-spacing: 0.05em;
 }
 
-*::-webkit-scrollbar {
-  width: 10px; /* width of the entire scrollbar */
-}
-
-*::-webkit-scrollbar-track {
-  background-color: transparent; /* color of the tracking area */
-}
-
-*::-webkit-scrollbar-thumb {
-  height: 10px;
-  width: 10px;
-  display: none;
-  background-color: hsla(0, 0%, 50%, 0.5); /* color of the scroll thumb */
-  border-radius: 5px; /* roundness of the scroll thumb */
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  display: block;
+::selection {
+  color: black;
+  background: white;
 }

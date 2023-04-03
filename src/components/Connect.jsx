@@ -1,23 +1,19 @@
 import React from "react";
-import { useTheme } from "../App";
+import { motion } from "framer-motion";
+import { componentVarient } from "./varients/varients";
 
 export default function Connect() {
-  const modeToggled = useTheme();
+  const inputStyle =
+    "w-[350px] rounded-md bg-black/90 text-white py-2 px-4 text-sm focus:outline-none max-[500px]:w-[220px] ";
 
   return (
-    <section
-      id="connect"
-      className="mt-8 flex flex-col items-center max-[400px]:w-[95vw]"
+    <motion.section
+      variants={componentVarient}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="mx-auto flex h-[65vh] w-[65vw] flex-col items-center justify-center font-newCycle"
     >
-      <h1 className="mb-4 flex cursor-default justify-center gap-2 text-[48px]">
-        <span className="duration-75 hover:scale-125">C</span>
-        <span className="duration-75 hover:scale-125">O</span>
-        <span className="duration-75 hover:scale-125">N</span>
-        <span className="duration-75 hover:scale-125">N</span>
-        <span className="duration-75 hover:scale-125">E</span>
-        <span className="duration-75 hover:scale-125">C</span>
-        <span className="duration-75 hover:scale-125">T</span>
-      </h1>{" "}
       <form
         name="contact"
         method="POST"
@@ -30,21 +26,13 @@ export default function Connect() {
             type="text"
             placeholder="Name"
             name="name"
-            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm max-[400px]:w-[90vw] ${
-              modeToggled
-                ? "text-gray-300"
-                : "text-gray-700 placeholder:text-gray-600"
-            } focus:outline-none`}
+            className={`${inputStyle}`}
           />
           <input
             type="email"
             placeholder="E-mail"
             name="email"
-            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm max-[400px]:w-[90vw] ${
-              modeToggled
-                ? "text-gray-300"
-                : "text-gray-700 placeholder:text-gray-600"
-            } focus:outline-none`}
+            className={`${inputStyle}`}
           />
           <textarea
             name="message"
@@ -52,23 +40,17 @@ export default function Connect() {
             cols="30"
             rows="5"
             placeholder="any message or suggestion for me?"
-            className={`w-[350px] rounded-md bg-blueGrotto/50 py-2 px-4 text-sm max-[400px]:w-[90vw] ${
-              modeToggled
-                ? "text-gray-300"
-                : "text-gray-700 placeholder:text-gray-600"
-            } focus:outline-none`}
+            className={`${inputStyle}`}
           ></textarea>
         </section>
-        <button
+        <motion.button
           type="submit"
-          className="m-2 w-full rounded-md bg-gradient-to-bl from-blueGrotto to-blueGreen py-2 px-4 text-sm font-semibold uppercase text-navyBlue hover:shadow-sm hover:shadow-blueGreen"
+          className="m-2 w-full rounded-md bg-black/90 py-2 px-4 font-aboreto text-sm font-semibold text-white hover:shadow-sm"
+          whileHover={{ scale: 1.05 }}
         >
           connect
-        </button>
+        </motion.button>
       </form>
-      <small className="mt-8 w-full border-t border-blueGrotto py-2 text-center">
-        ©️2023
-      </small>
-    </section>
+    </motion.section>
   );
 }

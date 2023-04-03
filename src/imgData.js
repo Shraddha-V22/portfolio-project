@@ -12,6 +12,7 @@ import github from "./Images/github.svg";
 import nodejs from "./Images/nodejs.svg";
 import sass from "./Images/sass.svg";
 import tailwind from "./Images/tailwind.svg";
+import express from "./Images/express.svg";
 
 const logoImageData = [
   {
@@ -69,6 +70,10 @@ const logoImageData = [
   {
     url: figma,
     title: "Figma",
+  },
+  {
+    url: express,
+    title: "ExpressJs",
   },
 ];
 

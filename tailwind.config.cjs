@@ -4,17 +4,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: "#052C3B",
-        navyBlue: "#05445E",
-        blueGrotto: "#189AB4",
-        blueGreen: "#75E6DA",
-        babyBlue: "#D4F1F4",
+        navy: "#0F3057",
+        lightBeige: "#F9F5EB",
+        newBlue: "#00587A",
+        newTeal: "#008891",
+        newGrey: "#E7E7DE",
+      },
+      fontFamily: {
+        aboreto: ["Aboreto"],
+        karla: ["Karla"],
+        newCycle: ["News Cycle"],
       },
       boxShadow: {
         box: "-4px 4px 0 0 rgba(0, 0, 0, 0.3)",
         "box-inner": "inset -4px 4px 0 0 rgba(0, 0, 0, 0.3)",
-        spread:
-          "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+        spread: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
       },
       gridTemplateColumns: {
         "autoFill-50": "repeat(auto-fill, minmax(50px, auto))",
@@ -33,6 +37,9 @@ module.exports = {
       },
       backgroundSize: {
         "200%": "200%",
+      },
+      backgroundImage: {
+        main: "url('../Images/black-n-white.jpg')",
       },
     },
   },

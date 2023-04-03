@@ -1,6 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { componentVarient } from "./varients/varients";
 
 const blogsData = [
+  {
+    title: 'When does a function returns "undefined"?',
+    description:
+      "Functions are a huge part of almost every programming language. They are used to perform a specific task or calculation and return the value. Functions help in simplifying and organizing the code by breaking down the complex tasks into smaller, reusable units.",
+    url: "https://shraddha-v.hashnode.dev/when-does-a-function-returns-undefined",
+  },
   {
     title: "Primitive vs Reference Values in JavaScript",
     description:
@@ -23,35 +31,34 @@ const blogsData = [
 
 export default function Blogs() {
   return (
-    <section
-      id="blogs"
-      className="scroll-mt-12 px-4 py-8 sm:h-auto lg:h-[60vh]"
-    >
-      <h1 className="mb-4 flex cursor-default justify-center gap-2 text-[48px]">
-        <span className="duration-75 hover:scale-125">B</span>
-        <span className="duration-75 hover:scale-125">L</span>
-        <span className="duration-75 hover:scale-125">O</span>
-        <span className="duration-75 hover:scale-125">G</span>
-        <span className="duration-75 hover:scale-125">S</span>
-      </h1>{" "}
-      <section className="mx-auto mt-8 grid grid-cols-autoFill-250 gap-4 sm:w-[90vw] lg:w-[800px]">
+    <motion.section className="mx-auto grid h-full w-full place-items-center overflow-y-auto overflow-x-hidden p-4">
+      <section className="flex h-[fit-content] flex-wrap items-stretch justify-center gap-4">
         {blogsData.map((bl) => (
           <BlogCard key={bl.title} blog={bl} />
         ))}
       </section>
-    </section>
+    </motion.section>
   );
 }
 
 function BlogCard({ blog }) {
   return (
-    <a
-      href={blog.url}
-      target="_blank"
-      className="rounded-md bg-babyBlue p-4 text-navyBlue shadow-lg hover:bg-gradient-to-b hover:from-babyBlue hover:to-blueGreen hover:shadow-spread"
+    <motion.section
+      variants={componentVarient}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
-      <h1 className="mb-4 text-xl">{blog.title}</h1>
-      <p className="text-justify text-sm line-clamp-3">{blog.description}</p>
-    </a>
+      <div className="flex h-full w-[250px] flex-col justify-between rounded-md border-[1px] border-black/50 bg-black/90 p-4 text-white max-[600px]:w-[200px]">
+        <a href={blog.url} target="_blank">
+          <h1 className="mb-4 font-aboreto text-xl line-clamp-2">
+            {blog.title}
+          </h1>
+          <p className="text-justify font-newCycle text-sm line-clamp-3">
+            {blog.description}
+          </p>
+        </a>
+      </div>
+    </motion.section>
   );
 }
