@@ -10,6 +10,14 @@ import weatherapp from "./Images/weatherapp.png";
 const projectImageData = [
   {
     img: spotify,
+    title: "Netflix Clone",
+    live: "https://netflix-clone-sv.netlify.app/",
+    github: "https://github.com/Shraddha-V22/netflix-clone",
+    descp:
+      "A Netflix clone created using React, TypeScript, Tailwind CSS, and Firebase. The application features a catalog of movies, with trailers available for preview.",
+  },
+  {
+    img: spotify,
     title: "Spotify Clone",
     live: "https://spotify-clone-sv.netlify.app/login/login.html",
     github: "https://github.com/Shraddha-V22/spotify-clone",
@@ -63,14 +71,14 @@ const projectImageData = [
     descp:
       "There's no one who's not fond of little mischiveous Minions. Do you wanna speak miniones? Translate your english sentences into minionese also called the Banana language.",
   },
-  {
-    img: cashregister,
-    title: "Cash Register",
-    live: "https://cash-change-register.netlify.app/",
-    github: "https://github.com/Shraddha-V22/Cash-Register-Manager",
-    descp:
-      "This is cash register which tells you how much change to return to the customer and how much of which note/coin to return.",
-  },
+  // {
+  //   img: cashregister,
+  //   title: "Cash Register",
+  //   live: "https://cash-change-register.netlify.app/",
+  //   github: "https://github.com/Shraddha-V22/Cash-Register-Manager",
+  //   descp:
+  //     "This is cash register which tells you how much change to return to the customer and how much of which note/coin to return.",
+  // },
 ];
 
 export default projectImageData;
