@@ -4,7 +4,7 @@ import { componentVarient } from "./varients/varients";
 
 export default function Connect() {
   const inputStyle =
-    "w-[350px] rounded-md bg-black/90 text-white py-2 px-4 text-sm focus:outline-none max-[500px]:w-[220px] ";
+    "w-[350px] rounded-md bg-black/90 text-white py-2 px-4 text-sm focus:outline-none max-[500px]:w-[220px]";
 
   return (
     <motion.section

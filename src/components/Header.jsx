@@ -38,7 +38,7 @@ export default function Header() {
         ) : (
           <>
             <nav
-              className={`absolute top-0 h-screen w-full transition-all duration-300`}
+              className={`absolute top-0 w-full transition-all duration-300`}
             >
               <ul
                 className={`absolute top-1 flex w-full justify-center gap-2 p-1 text-sm uppercase transition-all duration-300`}
