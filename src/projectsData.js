@@ -9,7 +9,23 @@ import weatherapp from "./Images/weatherapp.png";
 
 const projectImageData = [
   {
-    img: spotify,
+    img: "",
+    title: "Expresso",
+    live: "https://expresso-sv.netlify.app/login",
+    github: "https://github.com/Shraddha-V22/expresso",
+    descp:
+      "A social media app to express yourselves and connect with your friends. Created using ReactJs, Tailwind CSS, React Context API, etc.",
+  },
+  {
+    img: "",
+    title: "Charme",
+    live: "https://charme-sv.netlify.app/",
+    github: "https://github.com/Shraddha-V22/e-commerce-project",
+    descp:
+      "An e-commerce website for fashion products. Created using ReactJs, Tailwind CSS, React Context API, Razorpay payment integration, etc.",
+  },
+  {
+    img: "",
     title: "Netflix Clone",
     live: "https://netflix-clone-sv.netlify.app/",
     github: "https://github.com/Shraddha-V22/netflix-clone",
@@ -23,14 +39,6 @@ const projectImageData = [
     github: "https://github.com/Shraddha-V22/spotify-clone",
     descp:
       "A Spotify clone created using Html, JavaScript, Tailwind css, Vite. Logins the user, displays the playlists, plays 30 seconds of preview of the song.",
-  },
-  {
-    img: ecomm,
-    title: "E-commerce app",
-    live: "https://shop-e-comm.netlify.app/",
-    github: "https://github.com/Shraddha-V22/e-commerce-app",
-    descp:
-      "An e-commerce site created using React, Redux, Material UI, emotion. Login, add products to the cart, place the order!",
   },
   {
     img: weatherapp,
@@ -63,22 +71,6 @@ const projectImageData = [
     descp:
       "Generate random quotes from famous personalites and post them to your Twitter directly.",
   },
-  {
-    img: banana,
-    title: "Minionese",
-    live: "https://banana-talk-translation.netlify.app/",
-    github: "https://github.com/Shraddha-V22/Banana-talk-project",
-    descp:
-      "There's no one who's not fond of little mischiveous Minions. Do you wanna speak miniones? Translate your english sentences into minionese also called the Banana language.",
-  },
-  // {
-  //   img: cashregister,
-  //   title: "Cash Register",
-  //   live: "https://cash-change-register.netlify.app/",
-  //   github: "https://github.com/Shraddha-V22/Cash-Register-Manager",
-  //   descp:
-  //     "This is cash register which tells you how much change to return to the customer and how much of which note/coin to return.",
-  // },
 ];
 
 export default projectImageData;
